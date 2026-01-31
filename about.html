@@ -28,7 +28,131 @@
         <p class="text-slate-300">Started learning in real</p>
       </div>
     </div>
-    
+    <div class="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-end gap-3">
+
+  <!-- Drawer Toggle -->
+  <button id="drawerToggle" 
+          class="w-10 h-10 rounded-full bg-violet-600 flex items-center justify-center shadow-lg shadow-violet-500/20 hover:scale-110 transition-transform">
+    <i data-lucide="menu" class="w-5 h-5 text-white"></i>
+  </button>
+
+  <!-- Navbar Items -->
+  <div id="navItems" class="flex flex-col gap-3">
+    <!-- Home -->
+    <a href="/index.html" class="group relative flex items-center justify-end">
+      <span class="nav-name mr-3 px-3 py-1.5 rounded-lg text-sm
+                   bg-[#111122]/80 backdrop-blur-md
+                   border border-white/10 text-slate-200
+                   opacity-0 translate-x-3 transition-all duration-300">
+        Home
+      </span>
+      <div class="w-10 h-10 rounded-full
+                  bg-[#111122]/80 backdrop-blur-md
+                  border border-white/10
+                  flex items-center justify-center
+                  shadow-lg shadow-violet-500/20
+                  hover:scale-110 hover:shadow-xl hover:bg-violet-700 transition-transform duration-300">
+        <i data-lucide="home" class="w-4 h-4 text-white"></i>
+      </div>
+    </a>
+
+    <!-- About -->
+    <a href="/about.html" class="group relative flex items-center justify-end">
+      <span class="nav-name mr-3 px-3 py-1.5 rounded-lg text-sm
+                   bg-[#111122]/80 backdrop-blur-md
+                   border border-white/10 text-slate-200
+                   opacity-0 translate-x-3 transition-all duration-300">
+        About
+      </span>
+      <div class="w-10 h-10 rounded-full
+                  bg-[#111122]/80 backdrop-blur-md
+                  border border-white/10
+                  flex items-center justify-center
+                  shadow-lg shadow-violet-500/20
+                  hover:scale-110 hover:shadow-xl hover:bg-violet-700 transition-transform duration-300">
+        <i data-lucide="user" class="w-4 h-4 text-white"></i>
+      </div>
+    </a>
+
+    <!-- Skills -->
+    <a href="#skills" class="group relative flex items-center justify-end">
+      <span class="nav-name mr-3 px-3 py-1.5 rounded-lg text-sm
+                   bg-[#111122]/80 backdrop-blur-md
+                   border border-white/10 text-slate-200
+                   opacity-0 translate-x-3 transition-all duration-300">
+        Skills
+      </span>
+      <div class="w-10 h-10 rounded-full
+                  bg-[#111122]/80 backdrop-blur-md
+                  border border-white/10
+                  flex items-center justify-center
+                  shadow-lg shadow-violet-500/20
+                  hover:scale-110 hover:shadow-xl hover:bg-violet-700 transition-transform duration-300">
+        <i data-lucide="code-2" class="w-4 h-4 text-white"></i>
+      </div>
+    </a>
+
+    <!-- Projects -->
+    <a href="#projects" class="group relative flex items-center justify-end">
+      <span class="nav-name mr-3 px-3 py-1.5 rounded-lg text-sm
+                   bg-[#111122]/80 backdrop-blur-md
+                   border border-white/10 text-slate-200
+                   opacity-0 translate-x-3 transition-all duration-300">
+        Projects
+      </span>
+      <div class="w-10 h-10 rounded-full
+                  bg-[#111122]/80 backdrop-blur-md
+                  border border-white/10
+                  flex items-center justify-center
+                  shadow-lg shadow-violet-500/20
+                  hover:scale-110 hover:shadow-xl hover:bg-violet-700 transition-transform duration-300">
+        <i data-lucide="layers" class="w-4 h-4 text-white"></i>
+      </div>
+    </a>
+
+    <!-- Contact -->
+    <a href="#contact" class="group relative flex items-center justify-end">
+      <span class="nav-name mr-3 px-3 py-1.5 rounded-lg text-sm
+                   bg-[#111122]/80 backdrop-blur-md
+                   border border-white/10 text-slate-200
+                   opacity-0 translate-x-3 transition-all duration-300">
+        Contact
+      </span>
+      <div class="w-10 h-10 rounded-full
+                  bg-[#111122]/80 backdrop-blur-md
+                  border border-white/10
+                  flex items-center justify-center
+                  shadow-lg shadow-violet-500/20
+                  hover:scale-110 hover:shadow-xl hover:bg-violet-700 transition-transform duration-300">
+        <i data-lucide="mail" class="w-4 h-4 text-white"></i>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<script>
+  lucide.createIcons();
+
+  const drawerToggle = document.getElementById('drawerToggle');
+  const navNames = document.querySelectorAll('.nav-name');
+
+  let isOpen = false;
+
+  drawerToggle.addEventListener('click', () => {
+    isOpen = !isOpen;
+
+    navNames.forEach(span => {
+      if (isOpen) {
+        span.classList.remove('opacity-0', 'translate-x-3');
+        span.classList.add('opacity-100', 'translate-x-0');
+      } else {
+        span.classList.add('opacity-0', 'translate-x-3');
+        span.classList.remove('opacity-100', 'translate-x-0');
+      }
+    });
+  });
+</script>
 
   </div>
 </section>
