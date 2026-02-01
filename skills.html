@@ -1,67 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/css/skill.css">
 </head>
 
 <body class="bg-[#0b0b12] text-slate-100">
+<section id="skills" class="relative py-32 overflow-hidden bg-[#0b0b12]">
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background glow -->
+  <div class="absolute inset-0 flex justify-center items-center">
+    <div class="w-[700px] h-[700px] bg-violet-600/20 rounded-full blur-[200px]"></div>
+  </div>
 
-  
-  <div class="absolute -top-48 -left-48 w-[520px] h-[520px] bg-violet-700/20 rounded-full blur-[140px]"></div>
-  <div class="absolute -bottom-48 -right-48 w-[520px] h-[520px] bg-purple-800/20 rounded-full blur-[140px]"></div>
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
+    <h2 class="text-center text-3xl md:text-4xl font-bold text-violet-300 mb-16">
+      Skills
+    </h2>
 
-  <div class="relative z-10 max-w-4xl text-center px-6">
+    <!-- Skills Network -->
+    <div class="relative h-[420px]">
 
-    
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full 
-                bg-white/5 border border-white/10 text-sm text-violet-300">
-      <span class="w-2 h-2 bg-violet-400 rounded-full"></span>
-      Web Developer · Problem Generator
+      <!-- Center -->
+      <div class="hex hex-lg center">JS</div>
+
+      <!-- Left -->
+      <div class="hex top-24 left-[18%]">HTML</div>
+      <div class="hex top-52 left-[10%]">CSS</div>
+
+      <!-- Right -->
+      <div class="hex top-24 right-[18%]">React</div>
+      <div class="hex top-52 right-[10%]">AWS</div>
+
+      <!-- Bottom -->
+      <div class="hex bottom-4 left-1/2 -translate-x-1/2">Node.js</div>
+
+      <!-- Connection lines -->
+      <span class="line l1"></span>
+      <span class="line l2"></span>
+      <span class="line l3"></span>
+      <span class="line l4"></span>
+      <span class="line l5"></span>
+
     </div>
 
-    
-    <h1 class="text-4xl md:text-6xl font-bold tracking-tight pt-[10px]">
-      Pratibha <span class="text-violet-400" style="font-family: 'Great Vibes', cursive;">Pokhrel</span>
-    </h1>
-
-    
-    <p class="mt-4 text-lg md:text-xl text-slate-300 max-w-2xl mx-auto">
-      A developer in the making, one commit at a time.
-    </p>
-
-    
-    <div class="mt-8 flex justify-center gap-4">
-      <a class="px-8 py-3 rounded-lg bg-violet-600 text-white font-semibold 
-                hover:bg-violet-700 transition">
-        View Projects
-      </a>
-
-      <a class="px-8 py-3 rounded-lg border border-white/20 
-                hover:bg-white/10 transition">
-        Download Resume
-      </a>
-    </div>
-
-    
-    <div class="mt-12 flex justify-center">
-      <div class="relative">
-        <div class="absolute inset-0 rounded-full bg-violet-600/30 blur-xl"></div>
-        <img src="/images/portfolio.jpeg"
-             class="relative w-48 h-48 rounded-full object-cover border border-white/10" />
+    <!-- Category Bars -->
+    <div class="mt-20 flex justify-between gap-6">
+      <div class="bar">
+        <span>Web Dev</span>
+        <div class="progress"></div>
+      </div>
+      <div class="bar">
+        <span>Cloud Tech</span>
+        <div class="progress"></div>
       </div>
     </div>
 
   </div>
 </section>
 
-<div class="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-end gap-3">
 
-  <!-- Drawer Toggle -->
+</section>
+    <section>
+    <div class="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-end gap-3">
+        <!-- Drawer Toggle -->
   <button id="drawerToggle" 
           class="w-10 h-10 rounded-full bg-violet-600 flex items-center justify-center shadow-lg shadow-violet-500/20 hover:scale-110 transition-transform">
     <i data-lucide="menu" class="w-5 h-5 text-white"></i>
@@ -161,6 +167,8 @@
 
   </div>
 </div>
+</section>
+
 
 <script>
   lucide.createIcons();
