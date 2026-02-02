@@ -3,42 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact</title>
+        <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/contact.css">
 </head>
-<body class="bg-[#0b0b12] text-slate-100">
-    <section id="about" class="bg-[#0b0b12] py-24">
-        
-    <div class="mx-auto text-center font-semibold text-4xl text-violet-300 pb-[90px]" style="font-family: 'Great Vibes',">About Me</div>
-  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<body>
+    <section id="contact" class="relative py-28 bg-[#0b0b12]">
 
-    <!-- Timeline -->
-    <div class="space-y-10">
-      <div class="p-6 bg-white/5 border border-white/10 rounded-xl hover:shadow-violet-500/20 hover:shadow-lg transition">
-        <h3 class="text-violet-400 font-semibold text-[18px]">2024</h3>
-        <p class="text-slate-300">Started learning programming basics</p>
+  <!-- Subtle background glow -->
+  <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+    <div class="w-[500px] h-[500px] bg-violet-600/15 rounded-full blur-[160px]"></div>
+  </div>
+
+  <div class="relative z-10 max-w-xl mx-auto px-6">
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl font-semibold text-center text-violet-300 mb-10">
+      Contact Me
+    </h2>
+
+    <!-- Contact Card -->
+    <div class="contact-card">
+
+      <form class="space-y-5">
+
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="contact-input"
+        />
+
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="contact-input"
+        />
+
+        <textarea
+          rows="4"
+          placeholder="Your Message"
+          class="contact-input resize-none"
+        ></textarea>
+
+        <button
+          type="submit"
+          class="w-full py-3 rounded-lg bg-violet-600 text-white font-medium
+                 hover:bg-violet-700 transition"
+        >
+          Send Message
+        </button>
+
+      </form>
+
+      <!-- Divider -->
+      <div class="my-8 h-px bg-white/10"></div>
+
+      <!-- Social Links -->
+      <div class="flex justify-center gap-6">
+
+        <a href="#" class="social-icon" aria-label="Email">
+          <i class="fa-regular fa-envelope text-[20px] mx-auto text-[var(--textgray-color)] group-hover:text-[var(--primary-color)]"></i>
+        </a>
+
+        <a href="#" class="social-icon" aria-label="LinkedIn">
+           <i class="fa-brands fa-linkedin text-[20px] mx-auto text-[var(--textgray-color)] group-hover:text-[var(--primary-color)]"></i>
+        </a>
+
+        <a href="#" class="social-icon" aria-label="GitHub">
+         <i class="fa-brands fa-github text-[20px] mx-auto text-[var(--textgray-color)] group-hover:text-[var(--primary-color)]"></i>
+        </a>
+
+        <a href="#" class="social-icon" aria-label="Twitter">
+          <i class="fa-brands fa-twitter text-[20px] mx-auto text-[var(--textgray-color)] group-hover:text-[var(--primary-color)]"></i>
+        </a>
+
       </div>
 
-      <div class="p-6 bg-white/5 border border-white/10 rounded-xl hover:shadow-violet-500/20 hover:shadow-lg transition">
-        <h3 class="text-violet-400 font-semibold text-[18px]">2025</h3>
-        <p class="text-slate-300">Still don't know anything</p>
-      </div>
-
-      <div class="p-6 bg-white/5 border border-white/10 rounded-xl hover:shadow-violet-500/20 hover:shadow-lg transition">
-        <h3 class="text-violet-400 font-semibold text-[18px]">2026</h3>
-        <p class="text-slate-300">Started learning in real</p>
-      </div>
     </div>
-
-<div class="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-end gap-3">
-
-  <!-- Drawer Toggle -->
+  </div>
+</section>
+    <section>
+        <section>
+    <div class="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-end gap-3">
+        <!-- Drawer Toggle -->
   <button id="drawerToggle" 
           class="w-10 h-10 rounded-full bg-violet-600 flex items-center justify-center shadow-lg shadow-violet-500/20 hover:scale-110 transition-transform">
     <i data-lucide="menu" class="w-5 h-5 text-white"></i>
@@ -69,7 +122,7 @@
       <span class="nav-name mr-3 px-3 py-1.5 rounded-lg text-sm
                    bg-[#111122]/80 backdrop-blur-md
                    border border-white/10 text-slate-200
-                   opacity-0 translate-x-3 transition-all duration-300">
+                   opacity-0 translate-x-3 transition-all duration-300">   
         About
       </span>
       <div class="w-10 h-10 rounded-full
@@ -119,7 +172,7 @@
     </a>
 
     <!-- Contact -->
-    <a href="#contact" class="group relative flex items-center justify-end">
+    <a href="/contact.html" class="group relative flex items-center justify-end">
       <span class="nav-name mr-3 px-3 py-1.5 rounded-lg text-sm
                    bg-[#111122]/80 backdrop-blur-md
                    border border-white/10 text-slate-200
@@ -135,9 +188,10 @@
         <i data-lucide="mail" class="w-4 h-4 text-white"></i>
       </div>
     </a>
-
   </div>
 </div>
+</section>
+
 
 <script>
   lucide.createIcons();
@@ -161,9 +215,6 @@
     });
   });
 </script>
-
-  </div>
-</section>
-
+    </section>
 </body>
 </html>
