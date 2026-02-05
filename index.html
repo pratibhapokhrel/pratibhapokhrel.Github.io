@@ -3,7 +3,38 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Portfolio</title>
+  <!-- Essential SEO & Browser tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pratibha Pokhrel | Web Developer & Computer Science Student</title>
+  <meta name="description"
+    content="Pratibha Pokhrel - Aspiring Full-Stack Web Developer skilled in HTML, CSS, Tailwind, JavaScript, React, Laravel, MySQL, C/C++. Explore projects, skills, and contact a passionate CS/IT student from Nepal." />
+  <meta name="keywords"
+    content="Pratibha Pokhrel, web developer, full stack developer, React developer, Laravel developer, Tailwind CSS, JavaScript, MySQL, computer science student, Nepal developer, portfolio" />
+  <meta name="author" content="Pratibha Pokhrel" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp, etc.) -->
+  <meta property="og:title" content="Pratibha Pokhrel | Web Developer Portfolio" />
+  <meta property="og:description"
+    content="Computer Science student and web developer mastering React, Laravel, Tailwind CSS, JavaScript & more. View projects, skills, and get in touch!" />
+  <meta property="og:image" content="https://pratibhapokhrel.com.np/portfolio.jpeg" />
+  <!-- Replace with your actual image URL (1200×630 recommended) -->
+  <meta property="og:url" content="https://pratibhapokhrel.com.np/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Pratibha Pokhrel Portfolio" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X Cards (especially good for developer community) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pratibha Pokhrel | Web Developer & React • Laravel Enthusiast" />
+  <meta name="twitter:description"
+    content="Building modern web apps with React, Laravel, Tailwind & MySQL. CS/IT student sharing projects & learning journey." />
+  <meta name="twitter:image" content="https://pratibhapokhrel.com.np/portfolio.jpeg" /> <!-- Same image as OG -->
+  <meta name="twitter:creator" content="@yourtwitterhandle" /> <!-- Add your @ if you have one -->
+
+  <!-- Favicon & other basics (add if not already present) -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -13,7 +44,7 @@
   <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
 </head>
 
- <body class="bg-[#0b0b12] text-slate-100 min-h-screen relative">
+<body class="bg-[#0b0b12] text-slate-100 min-h-screen relative">
 
   <!-- ============================================= -->
   <!-- HERO SECTION  -->
@@ -45,7 +76,8 @@
 
       <!-- CTA buttons -->
       <div class="mt-8 flex justify-center gap-4">
-        <a href="/project.html" class="px-8 py-3 rounded-lg bg-violet-600 text-white font-semibold hover:bg-violet-700 transition">
+        <a href="/project.html"
+          class="px-8 py-3 rounded-lg bg-violet-600 text-white font-semibold hover:bg-violet-700 transition">
           View Projects
         </a>
 
@@ -58,9 +90,8 @@
       <div class="mt-12 flex justify-center">
         <div class="relative">
           <div class="absolute inset-0 rounded-full bg-violet-600/30 blur-xl"></div>
-          <img src=""
-               class="relative w-48 h-48 rounded-full object-cover border border-white/10"
-               alt="Pratibha Pokhrel" />
+          <img src="" class="relative w-48 h-48 rounded-full object-cover border border-white/10"
+            alt="Pratibha Pokhrel" />
         </div>
       </div>
 
@@ -71,19 +102,16 @@
   <!-- ============================================= -->
   <!-- SIDEBAR / NAVIGATION (collapsible drawer)     -->
   <!-- ============================================= -->
-  <aside id="sidebar" 
-        class="fixed top-0 right-0 z-40 h-screen bg-[#0f0f1a]/95 backdrop-blur-xl 
+  <aside id="sidebar" class="fixed top-0 right-0 z-40 h-screen bg-[#0f0f1a]/95 backdrop-blur-xl 
                border-l border-violet-500/20 shadow-2xl shadow-violet-900/30
                transition-all duration-500 ease-in-out flex
                w-16 lg:w-16 data-[expanded=true]:lg:w-72 data-[expanded=true]:w-72">
 
     <!-- Compact icons-only version (always visible when collapsed) -->
-    <div id="icon_only"
-         class="w-16 flex-shrink-0 duration-500 flex flex-col items-center py-6 gap-8 
+    <div id="icon_only" class="w-16 flex-shrink-0 duration-500 flex flex-col items-center py-6 gap-8 
                 bg-[#111122]/40 border-r border-violet-500/10">
 
-      <button id="toggleBtn"
-              class="w-11 h-11 rounded-full bg-violet-600 flex items-center justify-center 
+      <button id="toggleBtn" class="w-11 h-11 rounded-full bg-violet-600 flex items-center justify-center 
                      shadow-xl shadow-violet-600/30 hover:scale-105 transition-all">
         <i data-lucide="menu" class="w-6 h-6 text-white"></i>
       </button>
@@ -164,9 +192,7 @@
   <!-- ============================================= -->
   <!-- MAIN CONTENT AREA                             -->
   <!-- ============================================= -->
-  <main id="mainContent" 
-        class="transition-all duration-500"
-        data-expanded="false">
+  <main id="mainContent" class="transition-all duration-500" data-expanded="false">
   </main>
 
 
@@ -177,11 +203,11 @@
   <script>
     lucide.createIcons();
 
-    const sidebar    = document.getElementById('sidebar');
-    const toggleBtn  = document.getElementById('toggleBtn');
-    const closeBtn   = document.getElementById('closeBtn');
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggleBtn');
+    const closeBtn = document.getElementById('closeBtn');
     const mainContent = document.getElementById('mainContent');
-    const iconOnly   = document.getElementById('icon_only');
+    const iconOnly = document.getElementById('icon_only');
 
     const STORAGE_KEY = 'sidebar-expanded';
     let isExpanded = localStorage.getItem(STORAGE_KEY) === 'true';
@@ -230,4 +256,5 @@
   </script>
 
 </body>
+
 </html>
